@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="8b2e787444a8f7f9" />
+    
+    <title>DripTrades Style | Official Store</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; color: #333; }
+
+        /* HEADER */
+        .header { 
+            background: #1a1a1a; color: white; text-align: center; padding: 15px; position: sticky; top: 0; z-index: 1000;
+            border-bottom: 2px solid #ff9900;
+        }
+        .header h2 { font-size: 20px; letter-spacing: 3px; text-transform: uppercase; }
+        .header h2 span { color: #ff9900; }
+
+        /* COMPACT HERO BANNER */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('dress1.jpg');
+            background-size: cover; background-position: center;
+            color: white; padding: 60px 20px; text-align: center;
+            border-bottom: 5px solid #ff9900;
+        }
+        .hero-content h1 { font-size: 32px; text-transform: uppercase; margin-bottom: 10px; font-weight: 800; letter-spacing: 2px; }
+        .hero-content p { font-size: 14px; opacity: 0.9; margin-bottom: 25px; font-weight: 400; }
+        .hero-btn { 
+            background: #ff9900; color: white; padding: 12px 25px; 
+            text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 13px;
+            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
+        }
+
+        /* PRODUCT GRID */
+        .container { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 15px; max-width: 900px; margin: 0 auto; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+        .card img { width: 100%; height: 250px; object-fit: contain; background: white; padding: 10px; }
+        .card-content { padding: 12px; text-align: center; flex-grow: 1; border-top: 1px solid #eee; }
+        .card-content h3 { font-size: 12px; height: 32px; overflow: hidden; margin-bottom: 8px; color: #444; }
+        .price-tag { font-size: 18px; color: #d32f2f; font-weight: bold; margin-bottom: 10px; }
+        .buy-btn { background: #ff9900; color: white; padding: 10px; text-decoration: none; border-radius: 6px; font-size: 11px; font-weight: bold; display: block; text-transform: uppercase; }
+        
+        /* FOOTER */
+        .footer { background: #1a1a1a; color: #bbb; text-align: center; padding: 35px 20px; margin-top: 30px; font-size: 12px; border-top: 4px solid #ff9900; }
+        .footer-links { margin-bottom: 15px; }
+        .footer-links span { margin: 0 10px; color: #ff9900; font-weight: bold; }
+        .copyright { color: #888; font-size: 11px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>DRIP<span>TRADES</span></h2>
+    </div>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>LUXURY STYLE 2026</h1>
+            <p>Exclusive Handpicked Summer Collections</p>
+            <a href="#shop" class="hero-btn">EXPLORE NOW</a>
+        </div>
+    </div>
+
+    <div class="container" id="shop">
+        
+        <div class="card" id="dress1"><img src="dress1.jpg"><div class="card-content"><h3>Zivopah Summer Stripe Dress</h3><div class="price-tag">$43.99</div><a href="https://amzn.to/3Qb4FBT" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress2"><img src="dress2.jpg"><div class="card-content"><h3>Molerani Women Summer Dress</h3><div class="price-tag">$31.22</div><a href="https://amzn.to/4dABK47" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress3"><img src="dress3.jpg"><div class="card-content"><h3>Chouyatou Striped Maxi Dress</h3><div class="price-tag">$35.50</div><a href="https://amzn.to/4bY6QRV" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress4"><img src="dress4.jpg"><div class="card-content"><h3>Hourglass Waist Cincher</h3><div class="price-tag">$37.99</div><a href="https://amzn.to/4dvIlwC" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress5"><img src="dress5.jpg"><div class="card-content"><h3>HOTOUCH Floral Summer Dress</h3><div class="price-tag">$16.99</div><a href="https://amzn.to/4t5aeR2" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress6"><img src="dress6.jpg"><div class="card-content"><h3>Ekouaer Two Piece Lounge Set</h3><div class="price-tag">$34.99</div><a href="https://amzn.to/489SwDJ" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress7"><img src="dress7.jpg"><div class="card-content"><h3>Premium Selection 7</h3><div class="price-tag">$43.99</div><a href="https://amzn.to/4dEZq7k" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress8"><img src="dress8.jpg"><div class="card-content"><h3>Luxury Evening Summer Gown</h3><div class="price-tag">$65.99</div><a href="https://amzn.to/4mlnhv3" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress9"><img src="dress9.jpg"><div class="card-content"><h3>Boho Chic Premium Maxi</h3><div class="price-tag">$45.99</div><a href="https://amzn.to/3PT5Xl9" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress10"><img src="dress10.jpg"><div class="card-content"><h3>Elegant Designer Sun Dress</h3><div class="price-tag">$67.00</div><a href="https://amzn.to/4srD0Kv" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress11"><img src="dress11.jpg"><div class="card-content"><h3>Luxury Silk Blend Collection</h3><div class="price-tag">$129.00</div><a href="https://amzn.to/4mrJjMW" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress12"><img src="dress12.jpg"><div class="card-content"><h3>High-End Boutique Summer Wear</h3><div class="price-tag">$119.08</div><a href="https://amzn.to/4mllLJn" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress13"><img src="dress13.jpg"><div class="card-content"><h3>Premium Summer Selection 13</h3><div class="price-tag">$30.99</div><a href="https://amzn.to/3Or0lOz" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress14"><img src="dress14.jpg"><div class="card-content"><h3>Elegant Style Pick 14</h3><div class="price-tag">$35.99</div><a href="https://amzn.to/4tPU8L7" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress15"><img src="dress15.jpg"><div class="card-content"><h3>Sophisticated Collection 15</h3><div class="price-tag">$45.99</div><a href="https://amzn.to/3O7VAJI" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress16"><img src="dress16.jpg"><div class="card-content"><h3>Luxury Signature Edition 16</h3><div class="price-tag">$168.00</div><a href="https://amzn.to/482qXfq" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress17"><img src="dress17.jpg"><div class="card-content"><h3>Floral Summer Dress</h3><div class="price-tag">$59.99</div><a href="https://amzn.to/4u5wOct" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress18"><img src="dress18.jpg"><div class="card-content"><h3>Stylish Summer Outfit</h3><div class="price-tag">$70.98</div><a href="https://amzn.to/4d0PmDV" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress19"><img src="dress19.jpg"><div class="card-content"><h3>Elegant Casual Wear</h3><div class="price-tag">$59.99</div><a href="https://amzn.to/4u0zfwT" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+        
+        <div class="card" id="dress20"><img src="dress20.jpg"><div class="card-content"><h3>Modern Chic Set</h3><div class="price-tag">$57.99</div><a href="https://amzn.to/48eahle" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <span>Fast Shipping</span> | <span>Secure Checkout</span> | <span>24/7 Support</span>
+        </div>
+        <p>Your satisfaction is our priority. Shop the latest trends with confidence.</p>
+        <p style="margin-top: 10px; font-style: italic; opacity: 0.8;">As an Amazon Associate, we earn from qualifying purchases.</p>
+        <div class="copyright">
+            &copy; 2026 DRIPTRADES STYLE. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
