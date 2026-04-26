@@ -1,121 +1,197 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="8b2e787444a8f7f9" />
-    
-    <title>DripTrades Style | Official Store</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; color: #333; }
-
-        /* HEADER */
-        .header { 
-            background: #1a1a1a; color: white; text-align: center; padding: 15px; position: sticky; top: 0; z-index: 1000;
-            border-bottom: 2px solid #ff9900;
-        }
-        .header h2 { font-size: 20px; letter-spacing: 3px; text-transform: uppercase; }
-        .header h2 span { color: #ff9900; }
-
-        /* COMPACT HERO BANNER */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('dress1.jpg');
-            background-size: cover; background-position: center;
-            color: white; padding: 60px 20px; text-align: center;
-            border-bottom: 5px solid #ff9900;
-        }
-        .hero-content h1 { font-size: 32px; text-transform: uppercase; margin-bottom: 10px; font-weight: 800; letter-spacing: 2px; }
-        .hero-content p { font-size: 14px; opacity: 0.9; margin-bottom: 25px; font-weight: 400; }
-        .hero-btn { 
-            background: #ff9900; color: white; padding: 12px 25px; 
-            text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 13px;
-            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
-        }
-
-        /* PRODUCT GRID */
-        .container { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 15px; max-width: 900px; margin: 0 auto; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
-        .card img { width: 100%; height: 250px; object-fit: contain; background: white; padding: 10px; }
-        .card-content { padding: 12px; text-align: center; flex-grow: 1; border-top: 1px solid #eee; }
-        .card-content h3 { font-size: 12px; height: 32px; overflow: hidden; margin-bottom: 8px; color: #444; }
-        .price-tag { font-size: 18px; color: #d32f2f; font-weight: bold; margin-bottom: 10px; }
-        .buy-btn { background: #ff9900; color: white; padding: 10px; text-decoration: none; border-radius: 6px; font-size: 11px; font-weight: bold; display: block; text-transform: uppercase; }
-        
-        /* FOOTER */
-        .footer { background: #1a1a1a; color: #bbb; text-align: center; padding: 35px 20px; margin-top: 30px; font-size: 12px; border-top: 4px solid #ff9900; }
-        .footer-links { margin-bottom: 15px; }
-        .footer-links span { margin: 0 10px; color: #ff9900; font-weight: bold; }
-        .copyright { color: #888; font-size: 11px; margin-top: 10px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="8b2e787444a8f7f9" />
+<title>DripTrades Style | Official Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#c9a96e;--gold-light:#e8d5b0;--black:#0a0a0a;--dark2:#1a1a1a;--cream:#faf8f4;--gray:#888;--border:rgba(201,169,110,0.2)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--cream);overflow-x:hidden}
+.header{background:#0a0a0a;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--border)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:6px;text-transform:uppercase}
+.logo span{color:var(--gold)}
+.header-tag{font-size:8px;letter-spacing:3px;color:var(--gray);text-transform:uppercase}
+.banner{background:linear-gradient(135deg,#0f0c00,#1c1408,#0a0a0a);padding:18px 20px 16px;text-align:center;border-bottom:1px solid var(--border)}
+.banner-eye{font-size:8px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.banner-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,52px);font-weight:300;line-height:1.1;margin-bottom:4px}
+.banner-title em{font-style:italic;color:var(--gold)}
+.banner-sub{font-size:9px;letter-spacing:3px;color:var(--gray);text-transform:uppercase}
+.section-top{text-align:center;padding:22px 16px 14px}
+.section-eye{font-size:8px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.section-ttl{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,36px);font-weight:300}
+.section-line{width:44px;height:1px;background:var(--gold);margin:10px auto 0}
+.grid-wrap{max-width:960px;margin:0 auto;padding:10px 6px 60px}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.card{background:var(--dark2);position:relative;overflow:hidden;display:flex;flex-direction:column;cursor:pointer}
+.card-img{position:relative;overflow:hidden;aspect-ratio:2/3;background:#141414}
+.card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease}
+.card:hover .card-img img{transform:scale(1.07)}
+.card-num{position:absolute;top:8px;left:8px;font-size:8px;color:rgba(255,255,255,0.28);z-index:2}
+.card-hover{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.97) 0%,rgba(0,0,0,0.1) 55%,transparent 100%);opacity:0;transition:opacity 0.4s;display:flex;flex-direction:column;justify-content:flex-end;padding:16px}
+.card:hover .card-hover{opacity:1}
+.ch-tag{font-size:7px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:4px}
+.ch-name{font-family:'Cormorant Garamond',serif;font-size:16px;color:white;margin-bottom:5px;line-height:1.3}
+.ch-desc{font-size:9px;color:rgba(255,255,255,0.65);line-height:1.5;margin-bottom:10px}
+.ch-btn{display:inline-block;padding:8px 14px;background:var(--gold);color:var(--black);font-size:8px;letter-spacing:2px;font-weight:700;text-transform:uppercase;align-self:flex-start}
+.card-info{padding:10px 12px 14px;display:flex;align-items:center;justify-content:space-between;gap:6px;border-top:1px solid rgba(255,255,255,0.06)}
+.card-name{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--cream);opacity:0.85;flex:1;line-height:1.3}
+.card-price{font-size:14px;font-weight:700;color:var(--gold);white-space:nowrap}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:5000;display:none;align-items:center;justify-content:center;padding:14px;overflow-y:auto}
+.modal-backdrop.active{display:flex}
+.modal{background:var(--dark2);border:1px solid var(--border);max-width:740px;width:100%;display:grid;grid-template-columns:1fr 1fr;position:relative;margin:auto;border-radius:4px;overflow:hidden}
+.modal-img{background:#141414;min-height:360px}
+.modal-img img{width:100%;height:100%;object-fit:cover;display:block}
+.modal-body{padding:28px 24px;display:flex;flex-direction:column;justify-content:center}
+.modal-tag{font-size:8px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--cream);line-height:1.25;margin-bottom:14px}
+.modal-div{width:36px;height:1px;background:var(--gold);margin-bottom:14px}
+.modal-desc{font-size:11px;line-height:1.85;color:rgba(250,248,244,0.6);margin-bottom:16px}
+.modal-features{list-style:none;margin-bottom:20px}
+.modal-features li{font-size:10px;color:rgba(250,248,244,0.5);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:8px}
+.modal-features li::before{content:'—';color:var(--gold);flex-shrink:0}
+.modal-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:18px}
+.modal-price{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;color:var(--gold)}
+.modal-pnote{font-size:10px;color:var(--gray)}
+.modal-btn{display:block;text-align:center;padding:14px;background:var(--gold);color:var(--black);text-decoration:none;font-size:10px;letter-spacing:3px;font-weight:700;text-transform:uppercase;margin-bottom:8px;transition:background 0.3s}
+.modal-btn:hover{background:var(--gold-light)}
+.modal-anote{font-size:10px;color:var(--gray);text-align:center;opacity:0.5}
+.modal-close{position:absolute;top:12px;right:12px;background:var(--dark2);border:1px solid var(--border);color:var(--gray);width:36px;height:36px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:all 0.3s}
+.modal-close:hover{border-color:var(--gold);color:var(--gold)}
+.footer{background:var(--dark2);border-top:1px solid var(--border);padding:44px 24px 32px;text-align:center}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;letter-spacing:8px;margin-bottom:18px}
+.footer-logo span{color:var(--gold)}
+.footer-line{width:60px;height:1px;background:var(--gold);margin:0 auto 22px}
+.footer-badges{display:flex;justify-content:center;gap:28px;margin-bottom:22px;flex-wrap:wrap}
+.badge{display:flex;flex-direction:column;align-items:center;gap:5px}
+.badge-icon{font-size:20px}
+.badge-text{font-size:9px;letter-spacing:2px;color:var(--gray);text-transform:uppercase}
+.anote{font-size:10px;color:rgba(255,255,255,0.22);margin-bottom:12px;font-style:italic}
+.copy{font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.12);text-transform:uppercase}
+@media(max-width:600px){
+.header{padding:12px 16px}
+.header-tag{display:none}
+.modal{grid-template-columns:1fr}
+.modal-img{min-height:250px}
+.modal-body{padding:20px 16px}
+}
+</style>
 </head>
 <body>
 
-    <div class="header">
-        <h2>DRIP<span>TRADES</span></h2>
-    </div>
+<div class="header">
+<div class="logo">DRIP<span>TRADES</span></div>
+<div class="header-tag">Luxury Summer Collection 2026</div>
+</div>
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1>LUXURY STYLE 2026</h1>
-            <p>Exclusive Handpicked Summer Collections</p>
-            <a href="#shop" class="hero-btn">EXPLORE NOW</a>
-        </div>
-    </div>
+<div class="banner">
+<div class="banner-eye">✦ Exclusively Curated ✦</div>
+<h1 class="banner-title">Dress for <em>the season</em></h1>
+<p class="banner-sub">Handpicked summer collections · 2026 edition</p>
+</div>
 
-    <div class="container" id="shop">
-        
-        <div class="card" id="dress1"><img src="dress1.jpg"><div class="card-content"><h3>Zivopah Summer Stripe Dress</h3><div class="price-tag">$43.99</div><a href="https://amzn.to/3Qb4FBT" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress2"><img src="dress2.jpg"><div class="card-content"><h3>Molerani Women Summer Dress</h3><div class="price-tag">$31.22</div><a href="https://amzn.to/4dABK47" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress3"><img src="dress3.jpg"><div class="card-content"><h3>Chouyatou Striped Maxi Dress</h3><div class="price-tag">$35.50</div><a href="https://amzn.to/4bY6QRV" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress4"><img src="dress4.jpg"><div class="card-content"><h3>Hourglass Waist Cincher</h3><div class="price-tag">$37.99</div><a href="https://amzn.to/4dvIlwC" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress5"><img src="dress5.jpg"><div class="card-content"><h3>HOTOUCH Floral Summer Dress</h3><div class="price-tag">$16.99</div><a href="https://amzn.to/4t5aeR2" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress6"><img src="dress6.jpg"><div class="card-content"><h3>Ekouaer Two Piece Lounge Set</h3><div class="price-tag">$34.99</div><a href="https://amzn.to/489SwDJ" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress7"><img src="dress7.jpg"><div class="card-content"><h3>Premium Selection 7</h3><div class="price-tag">$43.99</div><a href="https://amzn.to/4dEZq7k" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress8"><img src="dress8.jpg"><div class="card-content"><h3>Luxury Evening Summer Gown</h3><div class="price-tag">$65.99</div><a href="https://amzn.to/4mlnhv3" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress9"><img src="dress9.jpg"><div class="card-content"><h3>Boho Chic Premium Maxi</h3><div class="price-tag">$45.99</div><a href="https://amzn.to/3PT5Xl9" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress10"><img src="dress10.jpg"><div class="card-content"><h3>Elegant Designer Sun Dress</h3><div class="price-tag">$67.00</div><a href="https://amzn.to/4srD0Kv" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress11"><img src="dress11.jpg"><div class="card-content"><h3>Luxury Silk Blend Collection</h3><div class="price-tag">$129.00</div><a href="https://amzn.to/4mrJjMW" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress12"><img src="dress12.jpg"><div class="card-content"><h3>High-End Boutique Summer Wear</h3><div class="price-tag">$119.08</div><a href="https://amzn.to/4mllLJn" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress13"><img src="dress13.jpg"><div class="card-content"><h3>Premium Summer Selection 13</h3><div class="price-tag">$30.99</div><a href="https://amzn.to/3Or0lOz" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress14"><img src="dress14.jpg"><div class="card-content"><h3>Elegant Style Pick 14</h3><div class="price-tag">$35.99</div><a href="https://amzn.to/4tPU8L7" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress15"><img src="dress15.jpg"><div class="card-content"><h3>Sophisticated Collection 15</h3><div class="price-tag">$45.99</div><a href="https://amzn.to/3O7VAJI" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress16"><img src="dress16.jpg"><div class="card-content"><h3>Luxury Signature Edition 16</h3><div class="price-tag">$168.00</div><a href="https://amzn.to/482qXfq" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress17"><img src="dress17.jpg"><div class="card-content"><h3>Floral Summer Dress</h3><div class="price-tag">$59.99</div><a href="https://amzn.to/4u5wOct" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress18"><img src="dress18.jpg"><div class="card-content"><h3>Stylish Summer Outfit</h3><div class="price-tag">$70.98</div><a href="https://amzn.to/4d0PmDV" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress19"><img src="dress19.jpg"><div class="card-content"><h3>Elegant Casual Wear</h3><div class="price-tag">$59.99</div><a href="https://amzn.to/4u0zfwT" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-        
-        <div class="card" id="dress20"><img src="dress20.jpg"><div class="card-content"><h3>Modern Chic Set</h3><div class="price-tag">$57.99</div><a href="https://amzn.to/48eahle" target="_blank" class="buy-btn">VIEW ON AMAZON</a></div></div>
-    </div>
+<div id="shop">
+<div class="section-top">
+<div class="section-eye">✦ The Collection</div>
+<h2 class="section-ttl">Summer Essentials</h2>
+<div class="section-line"></div>
+</div>
+<div class="grid-wrap">
+<div class="pgrid" id="productGrid"></div>
+</div>
+</div>
 
-    <div class="footer">
-        <div class="footer-links">
-            <span>Fast Shipping</span> | <span>Secure Checkout</span> | <span>24/7 Support</span>
-        </div>
-        <p>Your satisfaction is our priority. Shop the latest trends with confidence.</p>
-        <p style="margin-top: 10px; font-style: italic; opacity: 0.8;">As an Amazon Associate, we earn from qualifying purchases.</p>
-        <div class="copyright">
-            &copy; 2026 DRIPTRADES STYLE. All Rights Reserved.
-        </div>
-    </div>
+<div class="footer">
+<div class="footer-logo">DRIP<span>TRADES</span></div>
+<div class="footer-line"></div>
+<div class="footer-badges">
+<div class="badge"><div class="badge-icon">✦</div><div class="badge-text">Curated Picks</div></div>
+<div class="badge"><div class="badge-icon">⚡</div><div class="badge-text">Fast Shipping</div></div>
+<div class="badge"><div class="badge-icon">🔒</div><div class="badge-text">Secure Checkout</div></div>
+<div class="badge"><div class="badge-icon">✉</div><div class="badge-text">24/7 Support</div></div>
+</div>
+<p class="anote">As an Amazon Associate, we earn from qualifying purchases.</p>
+<p class="copy">© 2026 DripTrades Style · All Rights Reserved</p>
+</div>
 
+<div class="modal-backdrop" id="modalBackdrop">
+<div class="modal">
+<div class="modal-img"><img id="modalImg" src="" alt=""></div>
+<div class="modal-body">
+<div class="modal-tag" id="modalTag"></div>
+<h2 class="modal-title" id="modalTitle"></h2>
+<div class="modal-div"></div>
+<p class="modal-desc" id="modalDesc"></p>
+<ul class="modal-features" id="modalFeatures"></ul>
+<div class="modal-price-row">
+<div class="modal-price" id="modalPrice"></div>
+<div class="modal-pnote">FREE Amazon Shipping</div>
+</div>
+<a href="#" id="modalBtn" target="_blank" rel="noopener" class="modal-btn">VIEW ON AMAZON →</a>
+<p class="modal-anote">You will be redirected to Amazon.com</p>
+</div>
+<button class="modal-close" id="modalClose">✕</button>
+</div>
+</div>
+
+<script>
+var B='https://mubashirkhan1235ksj-debug.github.io/driptrades-store-/';
+var P=[
+{i:'dress1.jpg',n:'Zivopah Summer Stripe Dress',p:'$43.99',l:'https://amzn.to/3Qb4FBT',t:'✦ Bestseller · Stripe Edition',d:'A breezy, effortlessly chic stripe dress perfect for warm summer days. Lightweight fabric drapes beautifully offering comfort without compromising style.',f:['Lightweight breathable fabric','Classic stripe pattern','Flattering A-line silhouette','Available in multiple colors']},
+{i:'dress2.jpg',n:'Molerani Women Summer Dress',p:'$31.22',l:'https://amzn.to/4dABK47',t:'✦ Fan Favorite · Everyday Wear',d:'The ultimate summer staple. Transitions seamlessly from a morning coffee run to a beachside afternoon. Loved by thousands of happy customers.',f:['Soft jersey material','Relaxed fit design','Machine washable','Versatile day-to-night style']},
+{i:'dress3.jpg',n:'Chouyatou Striped Maxi Dress',p:'$35.50',l:'https://amzn.to/4bY6QRV',t:'✦ New Arrival · Maxi Style',d:'Floor-grazing elegance in a bold stripe. This maxi dress commands attention while keeping you cool and comfortable throughout the season.',f:['Full-length maxi cut','Bold stripe design','Side slit for movement','Adjustable shoulder straps']},
+{i:'dress4.jpg',n:'Hourglass Waist Cincher',p:'$37.99',l:'https://amzn.to/4dvIlwC',t:'✦ Body Sculpting · Premium Shapewear',d:'Define your silhouette with this sculpting waist cincher designed to enhance your natural curves. Wear under or over your favourite outfits.',f:['Firm comfortable compression','Breathable inner lining','Adjustable fit','Seamless under clothing']},
+{i:'dress5.jpg',n:'HOTOUCH Floral Summer Dress',p:'$16.99',l:'https://amzn.to/4t5aeR2',t:'✦ Best Value · Floral Print',d:'Gorgeous floral charm at an unbeatable price. Brings garden-party energy to everyday life with vibrant print and breezy silhouette.',f:['Vibrant floral print','Ultra lightweight fabric','Tiered hem design','Perfect for casual outings']},
+{i:'dress6.jpg',n:'Ekouaer Two Piece Lounge Set',p:'$34.99',l:'https://amzn.to/489SwDJ',t:'✦ Lounge Luxury · Two-Piece Set',d:'Elevated loungewear for the woman who refuses to compromise on comfort or style. Perfect for relaxed days in or casual outings.',f:['Coordinated two-piece set','Ultra-soft fabric blend','Elastic waistband','Relaxed yet polished look']},
+{i:'dress7.jpg',n:'Premium Selection 7',p:'$43.99',l:'https://amzn.to/4dEZq7k',t:'✦ Bohemian Style · Premium Pick',d:'Free-spirited and effortlessly beautiful. Captures the essence of carefree summer living with rich textures and flowing silhouettes.',f:['Bohemian-inspired design','Premium fabric quality','Flowing silhouette','Earthy seasonal tones']},
+{i:'dress8.jpg',n:'Luxury Evening Summer Gown',p:'$65.99',l:'https://amzn.to/4mlnhv3',t:'✦ Evening Wear · Luxury Edition',d:'Make an entrance. This evening gown brings unparalleled elegance to summer occasions — dinners, events, or a night to remember.',f:['Formal evening silhouette','Luxe fabric with sheen','Structured bodice','Floor-length dramatic hem']},
+{i:'dress9.jpg',n:'Boho Chic Premium Maxi',p:'$45.99',l:'https://amzn.to/3PT5Xl9',t:'✦ Boho Chic · Maxi Collection',d:'Wanderlust in woven form. This premium maxi dress channels bohemian romance with delicate details and endlessly versatile look.',f:['Premium boho detailing','Full maxi length','Breathable woven fabric','Flattering wrap-style front']},
+{i:'dress10.jpg',n:'Elegant Designer Sun Dress',p:'$67.00',l:'https://amzn.to/4srD0Kv',t:'✦ Designer Level · Sun Dress',d:'Elevated casual. This sun dress carries a designer sensibility — clean lines, quality construction, and a flattering silhouette.',f:['Designer-inspired cut','Premium construction','Versatile styling potential','Lightweight fabric']},
+{i:'dress11.jpg',n:'Luxury Silk Blend Collection',p:'$129.00',l:'https://amzn.to/4mrJjMW',t:'✦ Premium · Silk Blend',d:'The pinnacle of summer dressing. A silk-blend composition that drapes like a dream and looks unequivocally luxurious.',f:['Silk blend fabric','Hand-finished seams','Fluid elegant drape','Timeless investment piece']},
+{i:'dress12.jpg',n:'High-End Boutique Summer Wear',p:'$119.08',l:'https://amzn.to/4mllLJn',t:'✦ Boutique Grade · Exclusive',d:'Boutique quality delivered. Carries the craftsmanship and detail of a high-street boutique at a fraction of the price.',f:['Boutique-quality construction','Exclusive texture','Precise tailoring','Statement wardrobe piece']},
+{i:'dress13.jpg',n:'Premium Summer Selection 13',p:'$30.99',l:'https://amzn.to/3Or0lOz',t:'✦ Great Value · Summer Pick',d:'Proof that great style does not have to cost a fortune. This breezy summer pick delivers quality and comfort in equal measure.',f:['Budget-friendly luxury feel','Easy care fabric','Versatile seasonal styling','Available in multiple sizes']},
+{i:'dress14.jpg',n:'Elegant Style Pick 14',p:'$35.99',l:'https://amzn.to/4tPU8L7',t:'✦ Elegant · Refined Silhouette',d:'Quiet elegance for the modern woman. Simple lines, perfect proportion, and a refined palette that speaks volumes.',f:['Refined understated design','Clean tailored lines','Elevated everyday option','Easy to dress up or down']},
+{i:'dress15.jpg',n:'Sophisticated Collection 15',p:'$45.99',l:'https://amzn.to/3O7VAJI',t:'✦ Sophisticated · Curated Edit',d:'This piece balances polish with playfulness for the woman who moves between worlds with ease.',f:['Multi-occasion versatility','Sophisticated colour palette','Quality mid-weight fabric','Smart-casual aesthetic']},
+{i:'dress16.jpg',n:'Luxury Signature Edition 16',p:'$168.00',l:'https://amzn.to/482qXfq',t:'✦ Signature Edition · Most Luxurious',d:'Our most luxurious offering. The Signature Edition represents the apex of seasonal dressing — worth every penny.',f:['Signature exclusive design','Premium-grade materials','Impeccable finishing','Investment wardrobe piece']},
+{i:'dress17.jpg',n:'Floral Summer Dress',p:'$59.99',l:'https://amzn.to/4u5wOct',t:'✦ Floral Collection · Summer Bloom',d:'In full bloom. This floral summer dress captures the joyful spirit of the season with a fresh botanical print.',f:['Botanical floral print','Midi-length feminine cut','Smocked elastic bodice','Garden-party ready']},
+{i:'dress18.jpg',n:'Stylish Summer Outfit',p:'$70.98',l:'https://amzn.to/4d0PmDV',t:'✦ Trend-Forward · Style Statement',d:'A curated look from head to toe. Styled to turn heads whether strolling the promenade or seated at a terrace cafe.',f:['Complete coordinated outfit','Trend-forward seasonal design','Premium mixed fabrics','Styled for maximum impact']},
+{i:'dress19.jpg',n:'Elegant Casual Wear',p:'$59.99',l:'https://amzn.to/4u0zfwT',t:'✦ Casual Chic · Elevated Basics',d:'The art of looking effortlessly put-together. Your secret weapon for days when you want to look amazing without trying too hard.',f:['Elevated casual aesthetic','Relaxed but refined fit','Goes with everything','All-day comfort']},
+{i:'dress20.jpg',n:'Modern Chic Set',p:'$57.99',l:'https://amzn.to/48eahle',t:'✦ Modern · Co-ord Set',d:'Contemporary dressing made simple. This co-ord set delivers maximum style impact while removing all guesswork.',f:['Matching co-ord set','Contemporary modern cut','Mix-and-match potential','Ideal for brunches and outings']}
+];
+
+var grid=document.getElementById('productGrid');
+P.forEach(function(p,i){
+var num=String(i+1).padStart(2,'0');
+var c=document.createElement('div');
+c.className='card';
+c.innerHTML='<div class="card-img"><span class="card-num">'+num+'</span><img src="'+B+p.i+'" alt="'+p.n+'" loading="lazy"><div class="card-hover"><div class="ch-tag">'+p.t+'</div><div class="ch-name">'+p.n+'</div><div class="ch-desc">'+p.d.substring(0,80)+'...</div><span class="ch-btn">VIEW DETAILS</span></div></div><div class="card-info"><div class="card-name">'+p.n+'</div><div class="card-price">'+p.p+'</div></div>';
+c.addEventListener('click',function(){openModal(p);});
+grid.appendChild(c);
+});
+
+function openModal(p){
+document.getElementById('modalImg').src=B+p.i;
+document.getElementById('modalImg').alt=p.n;
+document.getElementById('modalTag').textContent=p.t;
+document.getElementById('modalTitle').textContent=p.n;
+document.getElementById('modalDesc').textContent=p.d;
+document.getElementById('modalPrice').textContent=p.p;
+document.getElementById('modalBtn').href=p.l;
+var ul=document.getElementById('modalFeatures');
+ul.innerHTML='';
+p.f.forEach(function(f){var li=document.createElement('li');li.textContent=f;ul.appendChild(li);});
+document.getElementById('modalBackdrop').classList.add('active');
+document.body.style.overflow='hidden';
+}
+function closeModal(){
+document.getElementById('modalBackdrop').classList.remove('active');
+document.body.style.overflow='';
+}
+document.getElementById('modalClose').addEventListener('click',closeModal);
+document.getElementById('modalBackdrop').addEventListener('click',function(e){if(e.target.id==='modalBackdrop')closeModal();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+</script>
 </body>
 </html>
