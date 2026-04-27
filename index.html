@@ -25,7 +25,9 @@ body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--cre
 .section-line{width:44px;height:1px;background:var(--gold);margin:10px auto 0}
 .grid-wrap{max-width:960px;margin:0 auto;padding:10px 6px 60px}
 .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
-.card{background:var(--dark2);position:relative;overflow:hidden;display:flex;flex-direction:column;cursor:pointer}
+.card{background:var(--dark2);position:relative;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;scroll-margin-top:70px}
+.card:target{box-shadow:0 0 0 3px var(--gold);animation:glow 1.5s ease}
+@keyframes glow{0%{box-shadow:0 0 20px var(--gold)}100%{box-shadow:0 0 0 3px var(--gold)}}
 .card-img{position:relative;overflow:hidden;aspect-ratio:2/3;background:#141414}
 .card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease}
 .card:hover .card-img img{transform:scale(1.07)}
@@ -139,36 +141,49 @@ body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--cre
 <script>
 var B='https://mubashirkhan1235ksj-debug.github.io/driptrades-store-/';
 var P=[
-{i:'dress1.jpg',n:'Zivopah Summer Stripe Dress',p:'$43.99',l:'https://amzn.to/3Qb4FBT',t:'✦ Bestseller · Stripe Edition',d:'A breezy, effortlessly chic stripe dress perfect for warm summer days. Lightweight fabric drapes beautifully offering comfort without compromising style.',f:['Lightweight breathable fabric','Classic stripe pattern','Flattering A-line silhouette','Available in multiple colors']},
-{i:'dress2.jpg',n:'Molerani Women Summer Dress',p:'$31.22',l:'https://amzn.to/4dABK47',t:'✦ Fan Favorite · Everyday Wear',d:'The ultimate summer staple. Transitions seamlessly from a morning coffee run to a beachside afternoon. Loved by thousands of happy customers.',f:['Soft jersey material','Relaxed fit design','Machine washable','Versatile day-to-night style']},
-{i:'dress3.jpg',n:'Chouyatou Striped Maxi Dress',p:'$35.50',l:'https://amzn.to/4bY6QRV',t:'✦ New Arrival · Maxi Style',d:'Floor-grazing elegance in a bold stripe. This maxi dress commands attention while keeping you cool and comfortable throughout the season.',f:['Full-length maxi cut','Bold stripe design','Side slit for movement','Adjustable shoulder straps']},
-{i:'dress4.jpg',n:'Hourglass Waist Cincher',p:'$37.99',l:'https://amzn.to/4dvIlwC',t:'✦ Body Sculpting · Premium Shapewear',d:'Define your silhouette with this sculpting waist cincher designed to enhance your natural curves. Wear under or over your favourite outfits.',f:['Firm comfortable compression','Breathable inner lining','Adjustable fit','Seamless under clothing']},
-{i:'dress5.jpg',n:'HOTOUCH Floral Summer Dress',p:'$16.99',l:'https://amzn.to/4t5aeR2',t:'✦ Best Value · Floral Print',d:'Gorgeous floral charm at an unbeatable price. Brings garden-party energy to everyday life with vibrant print and breezy silhouette.',f:['Vibrant floral print','Ultra lightweight fabric','Tiered hem design','Perfect for casual outings']},
-{i:'dress6.jpg',n:'Ekouaer Two Piece Lounge Set',p:'$34.99',l:'https://amzn.to/489SwDJ',t:'✦ Lounge Luxury · Two-Piece Set',d:'Elevated loungewear for the woman who refuses to compromise on comfort or style. Perfect for relaxed days in or casual outings.',f:['Coordinated two-piece set','Ultra-soft fabric blend','Elastic waistband','Relaxed yet polished look']},
-{i:'dress7.jpg',n:'Premium Selection 7',p:'$43.99',l:'https://amzn.to/4dEZq7k',t:'✦ Bohemian Style · Premium Pick',d:'Free-spirited and effortlessly beautiful. Captures the essence of carefree summer living with rich textures and flowing silhouettes.',f:['Bohemian-inspired design','Premium fabric quality','Flowing silhouette','Earthy seasonal tones']},
-{i:'dress8.jpg',n:'Luxury Evening Summer Gown',p:'$65.99',l:'https://amzn.to/4mlnhv3',t:'✦ Evening Wear · Luxury Edition',d:'Make an entrance. This evening gown brings unparalleled elegance to summer occasions — dinners, events, or a night to remember.',f:['Formal evening silhouette','Luxe fabric with sheen','Structured bodice','Floor-length dramatic hem']},
-{i:'dress9.jpg',n:'Boho Chic Premium Maxi',p:'$45.99',l:'https://amzn.to/3PT5Xl9',t:'✦ Boho Chic · Maxi Collection',d:'Wanderlust in woven form. This premium maxi dress channels bohemian romance with delicate details and endlessly versatile look.',f:['Premium boho detailing','Full maxi length','Breathable woven fabric','Flattering wrap-style front']},
-{i:'dress10.jpg',n:'Elegant Designer Sun Dress',p:'$67.00',l:'https://amzn.to/4srD0Kv',t:'✦ Designer Level · Sun Dress',d:'Elevated casual. This sun dress carries a designer sensibility — clean lines, quality construction, and a flattering silhouette.',f:['Designer-inspired cut','Premium construction','Versatile styling potential','Lightweight fabric']},
-{i:'dress11.jpg',n:'Luxury Silk Blend Collection',p:'$129.00',l:'https://amzn.to/4mrJjMW',t:'✦ Premium · Silk Blend',d:'The pinnacle of summer dressing. A silk-blend composition that drapes like a dream and looks unequivocally luxurious.',f:['Silk blend fabric','Hand-finished seams','Fluid elegant drape','Timeless investment piece']},
-{i:'dress12.jpg',n:'High-End Boutique Summer Wear',p:'$119.08',l:'https://amzn.to/4mllLJn',t:'✦ Boutique Grade · Exclusive',d:'Boutique quality delivered. Carries the craftsmanship and detail of a high-street boutique at a fraction of the price.',f:['Boutique-quality construction','Exclusive texture','Precise tailoring','Statement wardrobe piece']},
-{i:'dress13.jpg',n:'Premium Summer Selection 13',p:'$30.99',l:'https://amzn.to/3Or0lOz',t:'✦ Great Value · Summer Pick',d:'Proof that great style does not have to cost a fortune. This breezy summer pick delivers quality and comfort in equal measure.',f:['Budget-friendly luxury feel','Easy care fabric','Versatile seasonal styling','Available in multiple sizes']},
-{i:'dress14.jpg',n:'Elegant Style Pick 14',p:'$35.99',l:'https://amzn.to/4tPU8L7',t:'✦ Elegant · Refined Silhouette',d:'Quiet elegance for the modern woman. Simple lines, perfect proportion, and a refined palette that speaks volumes.',f:['Refined understated design','Clean tailored lines','Elevated everyday option','Easy to dress up or down']},
-{i:'dress15.jpg',n:'Sophisticated Collection 15',p:'$45.99',l:'https://amzn.to/3O7VAJI',t:'✦ Sophisticated · Curated Edit',d:'This piece balances polish with playfulness for the woman who moves between worlds with ease.',f:['Multi-occasion versatility','Sophisticated colour palette','Quality mid-weight fabric','Smart-casual aesthetic']},
-{i:'dress16.jpg',n:'Luxury Signature Edition 16',p:'$168.00',l:'https://amzn.to/482qXfq',t:'✦ Signature Edition · Most Luxurious',d:'Our most luxurious offering. The Signature Edition represents the apex of seasonal dressing — worth every penny.',f:['Signature exclusive design','Premium-grade materials','Impeccable finishing','Investment wardrobe piece']},
-{i:'dress17.jpg',n:'Floral Summer Dress',p:'$59.99',l:'https://amzn.to/4u5wOct',t:'✦ Floral Collection · Summer Bloom',d:'In full bloom. This floral summer dress captures the joyful spirit of the season with a fresh botanical print.',f:['Botanical floral print','Midi-length feminine cut','Smocked elastic bodice','Garden-party ready']},
-{i:'dress18.jpg',n:'Stylish Summer Outfit',p:'$70.98',l:'https://amzn.to/4d0PmDV',t:'✦ Trend-Forward · Style Statement',d:'A curated look from head to toe. Styled to turn heads whether strolling the promenade or seated at a terrace cafe.',f:['Complete coordinated outfit','Trend-forward seasonal design','Premium mixed fabrics','Styled for maximum impact']},
-{i:'dress19.jpg',n:'Elegant Casual Wear',p:'$59.99',l:'https://amzn.to/4u0zfwT',t:'✦ Casual Chic · Elevated Basics',d:'The art of looking effortlessly put-together. Your secret weapon for days when you want to look amazing without trying too hard.',f:['Elevated casual aesthetic','Relaxed but refined fit','Goes with everything','All-day comfort']},
-{i:'dress20.jpg',n:'Modern Chic Set',p:'$57.99',l:'https://amzn.to/48eahle',t:'✦ Modern · Co-ord Set',d:'Contemporary dressing made simple. This co-ord set delivers maximum style impact while removing all guesswork.',f:['Matching co-ord set','Contemporary modern cut','Mix-and-match potential','Ideal for brunches and outings']}
+{id:'dress1',i:'dress1.jpg',n:'Zivopah Summer Stripe Dress',p:'$43.99',l:'https://amzn.to/3Qb4FBT',t:'✦ Bestseller · Stripe Edition',d:'A breezy, effortlessly chic stripe dress perfect for warm summer days. Lightweight fabric drapes beautifully offering comfort without compromising style.',f:['Lightweight breathable fabric','Classic stripe pattern','Flattering A-line silhouette','Available in multiple colors']},
+{id:'dress2',i:'dress2.jpg',n:'Molerani Women Summer Dress',p:'$31.22',l:'https://amzn.to/4dABK47',t:'✦ Fan Favorite · Everyday Wear',d:'The ultimate summer staple. Transitions seamlessly from a morning coffee run to a beachside afternoon. Loved by thousands of happy customers.',f:['Soft jersey material','Relaxed fit design','Machine washable','Versatile day-to-night style']},
+{id:'dress3',i:'dress3.jpg',n:'Chouyatou Striped Maxi Dress',p:'$35.50',l:'https://amzn.to/4bY6QRV',t:'✦ New Arrival · Maxi Style',d:'Floor-grazing elegance in a bold stripe. This maxi dress commands attention while keeping you cool and comfortable throughout the season.',f:['Full-length maxi cut','Bold stripe design','Side slit for movement','Adjustable shoulder straps']},
+{id:'dress4',i:'dress4.jpg',n:'Hourglass Waist Cincher',p:'$37.99',l:'https://amzn.to/4dvIlwC',t:'✦ Body Sculpting · Premium Shapewear',d:'Define your silhouette with this sculpting waist cincher designed to enhance your natural curves.',f:['Firm comfortable compression','Breathable inner lining','Adjustable fit','Seamless under clothing']},
+{id:'dress5',i:'dress5.jpg',n:'HOTOUCH Floral Summer Dress',p:'$16.99',l:'https://amzn.to/4t5aeR2',t:'✦ Best Value · Floral Print',d:'Gorgeous floral charm at an unbeatable price. Brings garden-party energy to everyday life with vibrant print and breezy silhouette.',f:['Vibrant floral print','Ultra lightweight fabric','Tiered hem design','Perfect for casual outings']},
+{id:'dress6',i:'dress6.jpg',n:'Ekouaer Two Piece Lounge Set',p:'$34.99',l:'https://amzn.to/489SwDJ',t:'✦ Lounge Luxury · Two-Piece Set',d:'Elevated loungewear for the woman who refuses to compromise on comfort or style. Perfect for relaxed days in or casual outings.',f:['Coordinated two-piece set','Ultra-soft fabric blend','Elastic waistband','Relaxed yet polished look']},
+{id:'dress7',i:'dress7.jpg',n:'Premium Selection 7',p:'$43.99',l:'https://amzn.to/4dEZq7k',t:'✦ Bohemian Style · Premium Pick',d:'Free-spirited and effortlessly beautiful. Captures the essence of carefree summer living with rich textures and flowing silhouettes.',f:['Bohemian-inspired design','Premium fabric quality','Flowing silhouette','Earthy seasonal tones']},
+{id:'dress8',i:'dress8.jpg',n:'Luxury Evening Summer Gown',p:'$65.99',l:'https://amzn.to/4mlnhv3',t:'✦ Evening Wear · Luxury Edition',d:'Make an entrance. This evening gown brings unparalleled elegance to summer occasions — dinners, events, or a night to remember.',f:['Formal evening silhouette','Luxe fabric with sheen','Structured bodice','Floor-length dramatic hem']},
+{id:'dress9',i:'dress9.jpg',n:'Boho Chic Premium Maxi',p:'$45.99',l:'https://amzn.to/3PT5Xl9',t:'✦ Boho Chic · Maxi Collection',d:'Wanderlust in woven form. This premium maxi dress channels bohemian romance with delicate details and endlessly versatile look.',f:['Premium boho detailing','Full maxi length','Breathable woven fabric','Flattering wrap-style front']},
+{id:'dress10',i:'dress10.jpg',n:'Elegant Designer Sun Dress',p:'$67.00',l:'https://amzn.to/4srD0Kv',t:'✦ Designer Level · Sun Dress',d:'Elevated casual. This sun dress carries a designer sensibility — clean lines, quality construction, and a flattering silhouette.',f:['Designer-inspired cut','Premium construction','Versatile styling potential','Lightweight fabric']},
+{id:'dress11',i:'dress11.jpg',n:'Luxury Silk Blend Collection',p:'$129.00',l:'https://amzn.to/4mrJjMW',t:'✦ Premium · Silk Blend',d:'The pinnacle of summer dressing. A silk-blend composition that drapes like a dream and looks unequivocally luxurious.',f:['Silk blend fabric','Hand-finished seams','Fluid elegant drape','Timeless investment piece']},
+{id:'dress12',i:'dress12.jpg',n:'High-End Boutique Summer Wear',p:'$119.08',l:'https://amzn.to/4mllLJn',t:'✦ Boutique Grade · Exclusive',d:'Boutique quality delivered. Carries the craftsmanship and detail of a high-street boutique at a fraction of the price.',f:['Boutique-quality construction','Exclusive texture','Precise tailoring','Statement wardrobe piece']},
+{id:'dress13',i:'dress13.jpg',n:'Premium Summer Selection 13',p:'$30.99',l:'https://amzn.to/3Or0lOz',t:'✦ Great Value · Summer Pick',d:'Proof that great style does not have to cost a fortune. This breezy summer pick delivers quality and comfort in equal measure.',f:['Budget-friendly luxury feel','Easy care fabric','Versatile seasonal styling','Available in multiple sizes']},
+{id:'dress14',i:'dress14.jpg',n:'Elegant Style Pick 14',p:'$35.99',l:'https://amzn.to/4tPU8L7',t:'✦ Elegant · Refined Silhouette',d:'Quiet elegance for the modern woman. Simple lines, perfect proportion, and a refined palette that speaks volumes.',f:['Refined understated design','Clean tailored lines','Elevated everyday option','Easy to dress up or down']},
+{id:'dress15',i:'dress15.jpg',n:'Sophisticated Collection 15',p:'$45.99',l:'https://amzn.to/3O7VAJI',t:'✦ Sophisticated · Curated Edit',d:'This piece balances polish with playfulness for the woman who moves between worlds with ease.',f:['Multi-occasion versatility','Sophisticated colour palette','Quality mid-weight fabric','Smart-casual aesthetic']},
+{id:'dress16',i:'dress16.jpg',n:'Luxury Signature Edition 16',p:'$168.00',l:'https://amzn.to/482qXfq',t:'✦ Signature Edition · Most Luxurious',d:'Our most luxurious offering. The Signature Edition represents the apex of seasonal dressing — worth every penny.',f:['Signature exclusive design','Premium-grade materials','Impeccable finishing','Investment wardrobe piece']},
+{id:'dress17',i:'dress17.jpg',n:'Floral Summer Dress',p:'$59.99',l:'https://amzn.to/4u5wOct',t:'✦ Floral Collection · Summer Bloom',d:'In full bloom. This floral summer dress captures the joyful spirit of the season with a fresh botanical print.',f:['Botanical floral print','Midi-length feminine cut','Smocked elastic bodice','Garden-party ready']},
+{id:'dress18',i:'dress18.jpg',n:'Stylish Summer Outfit',p:'$70.98',l:'https://amzn.to/4d0PmDV',t:'✦ Trend-Forward · Style Statement',d:'A curated look from head to toe. Styled to turn heads whether strolling the promenade or seated at a terrace cafe.',f:['Complete coordinated outfit','Trend-forward seasonal design','Premium mixed fabrics','Styled for maximum impact']},
+{id:'dress19',i:'dress19.jpg',n:'Elegant Casual Wear',p:'$59.99',l:'https://amzn.to/4u0zfwT',t:'✦ Casual Chic · Elevated Basics',d:'The art of looking effortlessly put-together. Your secret weapon for days when you want to look amazing without trying too hard.',f:['Elevated casual aesthetic','Relaxed but refined fit','Goes with everything','All-day comfort']},
+{id:'dress20',i:'dress20.jpg',n:'Modern Chic Set',p:'$57.99',l:'https://amzn.to/48eahle',t:'✦ Modern · Co-ord Set',d:'Contemporary dressing made simple. This co-ord set delivers maximum style impact while removing all guesswork.',f:['Matching co-ord set','Contemporary modern cut','Mix-and-match potential','Ideal for brunches and outings']}
 ];
 
 var grid=document.getElementById('productGrid');
-P.forEach(function(p,i){
-var num=String(i+1).padStart(2,'0');
+P.forEach(function(p){
 var c=document.createElement('div');
 c.className='card';
-c.innerHTML='<div class="card-img"><span class="card-num">'+num+'</span><img src="'+B+p.i+'" alt="'+p.n+'" loading="lazy"><div class="card-hover"><div class="ch-tag">'+p.t+'</div><div class="ch-name">'+p.n+'</div><div class="ch-desc">'+p.d.substring(0,80)+'...</div><span class="ch-btn">VIEW DETAILS</span></div></div><div class="card-info"><div class="card-name">'+p.n+'</div><div class="card-price">'+p.p+'</div></div>';
+c.id=p.id;
+c.innerHTML='<div class="card-img"><span class="card-num">'+p.id.replace('dress','')+'</span><img src="'+B+p.i+'" alt="'+p.n+'" loading="lazy"><div class="card-hover"><div class="ch-tag">'+p.t+'</div><div class="ch-name">'+p.n+'</div><div class="ch-desc">'+p.d.substring(0,80)+'...</div><span class="ch-btn">VIEW DETAILS</span></div></div><div class="card-info"><div class="card-name">'+p.n+'</div><div class="card-price">'+p.p+'</div></div>';
 c.addEventListener('click',function(){openModal(p);});
 grid.appendChild(c);
+});
+
+// URL hash check - jis dress ka # hai us pe scroll karo
+window.addEventListener('load',function(){
+var hash=window.location.hash;
+if(hash){
+var el=document.querySelector(hash);
+if(el){
+setTimeout(function(){
+el.scrollIntoView({behavior:'smooth',block:'center'});
+},500);
+}
+}
 });
 
 function openModal(p){
@@ -194,4 +209,4 @@ document.getElementById('modalBackdrop').addEventListener('click',function(e){if
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
 </script>
 </body>
-                              </html>
+  </html>
